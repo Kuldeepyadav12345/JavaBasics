@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>To change Fonts</p>
+    <h1 id ="demo">
+        Learning Javascript
+    </h1>
+    <button type="button" onclick="increaseSize();">
+        Increase Size
+    </button>
+    <button type="button" onclick="decreaseSize();">
+        Decrease Size
+    </button>
+    <script>
+        function increaseSize()
+        {
+            size=document.getElementById('demo').style.fontSize;
+            if(size==null || size==undefined || size=="")
+            {
+                i=35;
+            }
+            else
+            {
+                i=Number(size.substring(0,2))
+            }
+           while(i>0)
+           {
+               i=i+1;
+            var size=(i+"px");
+                document.getElementById('demo').style.fontSize=size;
+                return true;
+
+           }
+                
+            }
+            function decreaseSize()
+        {
+            size=document.getElementById('demo').style.fontSize;
+            if(size==null || size==undefined || size=="")
+            {
+                i=33;
+            }
+            else
+            {
+                i=Number(size.substring(0,2))
+            }
+           while(i>0)
+           {
+               i=i-1;
+            var size=(i+"px");
+                document.getElementById('demo').style.fontSize=size;
+                return true;
+
+           }
+                
+            }
+    </script>
+</body>
+</html>
